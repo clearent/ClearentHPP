@@ -159,6 +159,62 @@ header ul a strong {
   color:#222;
 }
 
+header menu {
+  clear:both;
+  margin: 25px 0 100px 0;
+  padding:0;
+}
+
+header menu a {
+  box-sizing: border-box;
+  display:block;
+  height:40px;
+
+  background: #eee;
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+
+  border:1px solid #d2d2d2;
+  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+  width:270px;
+  padding: 10px 0 10px 15px;
+  color:#000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header menu a:hover  {
+  text-decoration: underline;
+}
+
+header menu a.active {
+  color:#39c;
+}
+
+header menu a {
+  border-radius:5px 5px 0 0;
+}
+
+header menu a + a {
+  border-radius:0;
+}
+
+header menu a + a + a {
+  border-radius:0;
+}
+
+header menu a + a + a + a {
+  border-radius:0;
+}
+
+header menu a + a + a + a + a {
+  border-radius:0 0 5px 5px;
+}
+
 section {
   width:500px;
   float:right;
