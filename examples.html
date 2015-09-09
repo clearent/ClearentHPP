@@ -36,6 +36,10 @@
 
       </header>
       <section>
+
+        <p></p>
+        <p>After you have looked at some examples below, be sure to <a href="https://hpp-sb.clearent.net/" target="_blank">head on over to our live demo page and try out your own examples!</a></p>
+
         <h3>Basic 2 Lines of Code Example</h3>
 
         <p>At a bare minimum, you must set your Clearent-provided public key and call the Clearent.payButton() method. If you don't provide an amount,
@@ -60,31 +64,9 @@
         <img src="images/example1.png"/>
 
         <p></p>
-        <h3>Configuring Optional Billing Address and Heading Text</h3>
-
-        <p>As you saw in the <a href="configuration.html">configuration page</a> there are many options that can be configured. Below we are adding an optional billing address and
-          changing the heading text of the popup. </p>
-
-        <xmp>
-        <script>
-          Clearent.setProperty("pk", "307a301406072a864.....8ce3d076fde833c136b");
-          Clearent.setProperty("heading-text", "Complete payment details below");
-          Clearent.setProperty("show-billing-address", true);
-          Clearent.payButton({"amount": "64.50"});
-        </script>
-        </xmp>
-
-        <img src="images/example2.png"/>
-
-        <p></p>
-        <p>The Hosted Payment Page is responsive and designed use the screen efficiently. The same screen as above but viewed on a larger, non-mobile screen: </p>
-
-        <img src="images/example3.png"/>
-
-        <p></p>
         <h3>Flexible Configuration</h3>
 
-        <p>Configuration options can be grouped together when calling the <code>payButton()</code> method or added seperately. The following are all equivalent:</p>
+        <p>Configuration options can be grouped together when calling the <code>payButton()</code> method or added separately. The following are all equivalent:</p>
 
         <xmp>
         <script>
@@ -117,10 +99,53 @@
         </xmp>
 
         <p></p>
+        <h3>Configuring Optional Billing Address and Heading Text</h3>
+
+        <p>As you saw in the <a href="configuration.html">configuration page</a> there are many options that can be configured. Below we are adding an optional billing address and
+          changing the heading text of the popup. </p>
+
+        <xmp>
+        <script>
+          Clearent.setProperty("pk", "307a301406072a864.....8ce3d076fde833c136b");
+          Clearent.setProperty("heading-text", "Complete payment details below");
+          Clearent.setProperty("show-billing-address", true);
+          Clearent.payButton({"amount": "64.50"});
+        </script>
+        </xmp>
+
+        <img src="images/example2.png"/>
+
+        <p></p>
+        <p>The Hosted Payment Page is responsive and designed use the screen efficiently. The same screen as above but viewed on a larger, non-mobile screen: </p>
+
+        <img src="images/example3.png"/>
+
+        <p></p>
         <h3>Using Card Tokens</h3>
 
-        <p>Configuration options can be grouped together when calling the <code>payButton()</code> method or added seperately. The following are all equivalent:</p>
+        <p>By setting the "show-save-card-option", your customers can save their card data securely in our vault. A token is returned from the sale request that can be stored on your servers without
+          storing sensitive card data. </p>
 
+        <xmp>
+        <script>
+          Clearent.setProperty("pk", "307a301406072a864.....8ce3d076fde833c136b");
+          Clearent.setProperty("show-save-card-option", true);
+          Clearent.payButton({"amount": "64.50"});
+        </script>
+        </xmp>
+
+        <p>Your customer would then have the option of saving their card information for future purchases. </p>
+
+        <img src="images/example4.png"/>
+
+        <p></p>
+        <p>They can even save a meaningful name for their card: </p>
+
+        <img src="images/example5.png"/>
+
+        <p></p>
+        <p>The next time the customer logs into your site, you can provide saved payment methods to make the checkout process even easier. You simply provide
+        the token, card type, and description that was returned from the sale request.</p>
 
         <xmp>
         <script>
@@ -135,8 +160,17 @@
         </script>
         </xmp>
 
+        <p></p>
+        <p>The next time the customer logs into your site, you can provide saved payment methods to make the checkout process even easier. You simply provide
+          the token, card type, and description that was returned from the sale request. Saved cards are listed with the description provided by the customer.
+        </p><p>
+        If the customer didn't save a description with their card then the card is displayed as "[card type] ending in [last for digits of card]". If no card type
+        is provided when adding a token then the card is displayed as "Card ending in [last for digits of card]". </p>
 
-        https://hpp-sb.clearent.net/
+        <img src="images/example6.png"/>
+
+        <p></p>
+        <p>Ready to try some examples on your own? <a href="https://hpp-sb.clearent.net/" target="_blank">Visit our live demo page and try out your own examples!</a></p>
 
 
       </section>
