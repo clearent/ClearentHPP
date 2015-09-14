@@ -48,8 +48,13 @@
 
         <div id="prettify">
             <article>
+                <div class="container-overview">
+                    <dl class="details">
+                    </dl>
+                </div>
                 <h3 class="subsection-title">Members</h3>
                 <h4 class="name" id="add-payment-button-text"><span class="type-signature"></span>add-payment-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear on the button that launches the add payment method form
                 </div>
@@ -68,12 +73,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"add-payment-button-text"</span><span class="pun">,</span><span
-              class="str">"Add new payment method"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"add-payment-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Add new payment method"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("add-payment-button-text","Add new payment method");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "add-payment-button-text": "Add new payment method"
+        });</code></pre>
                 <h4 class="name" id="address-placeholder"><span class="type-signature"></span>address-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in address input field when address value has not yet been entered
                 </div>
@@ -92,12 +97,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"address-placeholder"</span><span
-              class="pun">,</span><span class="str">"Street name and number"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"address-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Street name and number"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("address-placeholder","Street name and number");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "address-placeholder": "Street name and number"
+        });</code></pre>
                 <h4 class="name" id="address-tooltip"><span class="type-signature"></span>address-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder address input field
                 </div>
@@ -116,12 +121,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"address-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter billing address"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"address-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter billing address"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("address-tooltip","Enter billing address");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "address-tooltip": "Enter billing address"
+        });</code></pre>
                 <h4 class="name" id="amount"><span class="type-signature"></span>amount<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     sale transaction amount
                 </div>
@@ -134,14 +139,14 @@
                 <dl class="details">
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"amount"</span><span class="pun">,</span><span
-              class="str">"88.50"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"amount"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"88.50"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("amount","88.50");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "amount": "88.50"
+        });</code></pre>
                 <h4 class="name" id="amount-placeholder"><span class="type-signature"></span>amount-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
-                    text to appear in amount input field when amount value has not yet been entered; amount input is shown if Clearent.amount has not been set when displaying payment form
+                    text to appear in amount input field when amount value has not yet been entered; amount input is shown if amount has not been set when displaying payment form
                 </div>
                 <h5>Type:</h5>
                 <ul>
@@ -164,14 +169,14 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"amount-placeholder"</span><span class="pun">,</span><span
-              class="str">"Enter donation amount"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"amount-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter donation amount"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("amount-placeholder","Enter donation amount");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "amount-placeholder": "Enter donation amount"
+        });</code></pre>
                 <h4 class="name" id="amount-tooltip"><span class="type-signature"></span>amount-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
-                    tooltip to appear when hovering over or focused on amount input field; amount input is shown if Clearent.amount has not been set when displaying payment form
+                    tooltip to appear when hovering over or focused on amount input field; amount input is shown if amount has not been set when displaying payment form
                 </div>
                 <h5>Type:</h5>
                 <ul>
@@ -194,12 +199,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"amount-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter amount in $xx.xx format"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"amount-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter amount in $xx.xx format"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("amount-tooltip","Enter amount in $xx.xx format");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "amount-tooltip": "Enter amount in $xx.xx format"
+        });</code></pre>
                 <h4 class="name" id="cancel-button-text"><span class="type-signature"></span>cancel-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear on the payment popup form's cancel button
                 </div>
@@ -218,12 +223,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"cancel-button-text"</span><span class="pun">,</span><span
-              class="str">"Continue Shopping"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"cancel-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Continue Shopping"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("cancel-button-text","Continue Shopping");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "cancel-button-text": "Continue Shopping"
+        });</code></pre>
                 <h4 class="name" id="card"><span class="type-signature"></span>card<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     last four digits of user-entered card number; (returns null if payment request has not yet been submitted)
                 </div>
@@ -236,9 +241,33 @@
                 <dl class="details">
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="kwd">var</span><span class="pln"> foo </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Clearent</span><span class="pun">.</span><span
-              class="pln">card</span><span class="pun">;</span></code></pre>
+                <pre class="prettyprint"><code>var foo = Clearent.getProperty('card');</code></pre>
+                <h4 class="name" id="card-acceptence-label"><span class="type-signature"></span>card-acceptence-label<span class="type-signature"> :string</span></h4>
+
+                <div class="description">
+                    text to appear in front of the image showing accepted cards (Visa, MasterCard, American Express, Discover, Diners Club, JCB).
+                </div>
+                <h5>Type:</h5>
+                <ul>
+                    <li>
+                        <span class="param-type">string</span>
+                    </li>
+                </ul>
+                <dl class="details">
+                    <dt class="tag-default">Default Value:</dt>
+                    <dd class="tag-default">
+                        <ul class="dummy">
+                            <li>Pay using.</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <h5>Examples</h5>
+                <pre class="prettyprint"><code>Clearent.setProperty("card-acceptence-label","We proudly accept");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "card-acceptence-label": "We proudly accept"
+        });</code></pre>
                 <h4 class="name" id="card-description-placeholder"><span class="type-signature"></span>card-description-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in CVC input field when CVC value has not yet been entered
                 </div>
@@ -257,12 +286,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"cvc-placeholder"</span><span class="pun">,</span><span
-              class="str">"card security code"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"cvc-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"card security code"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("cvc-placeholder","card security code");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "cvc-placeholder": "card security code"
+        });</code></pre>
                 <h4 class="name" id="card-description-tooltip"><span class="type-signature"></span>card-description-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on card description input field
                 </div>
@@ -281,12 +310,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"card-description-tooltip"</span><span
-              class="pun">,</span><span class="str">"Enter a nickname for this card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"card-description-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter a nickname for this card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("card-description-tooltip","Enter a nickname for this card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "card-description-tooltip": "Enter a nickname for this card"
+        });</code></pre>
                 <h4 class="name" id="card-placeholder"><span class="type-signature"></span>card-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in card input field when card value has not yet been entered
                 </div>
@@ -305,12 +334,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"card-placeholder"</span><span class="pun">,</span><span
-              class="str">"Enter card number"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"card-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter card number"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("card-placeholder","Enter card number");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "card-placeholder": "Enter card number"
+        });</code></pre>
                 <h4 class="name" id="card-token-only"><span class="type-signature"></span>card-token-only<span class="type-signature"> :boolean</span></h4>
+
                 <div class="description">
                     option to get a card token only for later use, does not perform sale
                 </div>
@@ -329,12 +358,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"card-token-only"</span><span class="pun">,</span><span
-              class="pln"> </span><span class="kwd">false</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"card-token-only"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("card-token-only", false);</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "card-token-only": false
+        });</code></pre>
                 <h4 class="name" id="card-tooltip"><span class="type-signature"></span>card-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when hovering over or focused on card number input field
                 </div>
@@ -353,12 +382,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"card-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter card number as it appears on your card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"card-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter card number as it appears on your card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("card-tooltip","Enter card number as it appears on your card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "card-tooltip": "Enter card number as it appears on your card"
+        });</code></pre>
                 <h4 class="name" id="city-placeholder"><span class="type-signature"></span>city-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in city input field when city value has not yet been entered
                 </div>
@@ -377,12 +406,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"city-placeholder"</span><span class="pun">,</span><span
-              class="str">"Enter city"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"city-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter city"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("city-placeholder","Enter city");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "city-placeholder": "Enter city"
+        });</code></pre>
                 <h4 class="name" id="city-tooltip"><span class="type-signature"></span>city-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder city input field
                 </div>
@@ -401,12 +430,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"city-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter city of your billing address"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"city-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter city of your billing address"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("city-tooltip","Enter city of your billing address");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "city-tooltip": "Enter city of your billing address"
+        });</code></pre>
                 <h4 class="name" id="close-button-text"><span class="type-signature"></span>close-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear on the payment popup form's close button after successful transaction
                 </div>
@@ -425,12 +454,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"close-button-text"</span><span class="pun">,</span><span
-              class="str">"Return to Page"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"close-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Return to Page"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("close-button-text","Return to Page");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "close-button-text": "Return to Page"
+        });</code></pre>
                 <h4 class="name" id="cvc-placeholder"><span class="type-signature"></span>cvc-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in CVC input field when CVC value has not yet been entered
                 </div>
@@ -444,17 +473,17 @@
                     <dt class="tag-default">Default Value:</dt>
                     <dd class="tag-default">
                         <ul class="dummy">
-                            <li>CVC</li>
+                            <li>Security Code</li>
                         </ul>
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"cvc-placeholder"</span><span class="pun">,</span><span
-              class="str">"card security code"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"cvc-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"card security code"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("cvc-placeholder","card security code");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "cvc-placeholder": "card security code"
+        });</code></pre>
                 <h4 class="name" id="cvc-required"><span class="type-signature"></span>cvc-required<span class="type-signature"> :boolean</span></h4>
+
                 <div class="description">
                     determines if user must enter a value for cvc input
                 </div>
@@ -473,12 +502,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"cvc-required"</span><span class="pun">,</span><span
-              class="pln"> </span><span class="kwd">false</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"cvc-required"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("cvc-required", false);</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "cvc-required": false
+        });</code></pre>
                 <h4 class="name" id="cvc-tooltip"><span class="type-signature"></span>cvc-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when hovering over or focused on card cvc input field
                 </div>
@@ -497,12 +526,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"cvc-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter security code from your card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"cvc-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter security code from your card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("cvc-tooltip","Enter security code from your card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "cvc-tooltip": "Enter security code from your card"
+        });</code></pre>
                 <h4 class="name" id="error-message"><span class="type-signature"></span>error-message<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in the popup when transaction was unsuccessful.
                 </div>
@@ -521,12 +550,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"error-message"</span><span class="pun">,</span><span
-              class="str">"We were unable to process your payment. Please contact us to complete your order.."</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"error-message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"We were unable to process your payment. Please contact us to complete your order.."</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("error-message","We were unable to process your payment. Please contact us to complete your order..");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "error-message": "We were unable to process your payment. Please contact us to complete your order.."
+        });</code></pre>
                 <h4 class="name" id="exp-date-placeholder"><span class="type-signature"></span>exp-date-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in expiration date input field when expiration date value has not yet been entered
                 </div>
@@ -545,12 +574,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"exp-date-placeholder"</span><span
-              class="pun">,</span><span class="str">"mm/yy"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"exp-date-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"mm/yy"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("exp-date-placeholder","mm/yy");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "exp-date-placeholder": "mm/yy"
+        });</code></pre>
                 <h4 class="name" id="exp-date-tooltip"><span class="type-signature"></span>exp-date-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when hovering over or focused on card expiration date input field
                 </div>
@@ -564,17 +593,17 @@
                     <dt class="tag-default">Default Value:</dt>
                     <dd class="tag-default">
                         <ul class="dummy">
-                            <li>Enter 2-digit month and 2-digit year</li>
+                            <li>Enter 2-digit expiration month and 2-digit expiration year</li>
                         </ul>
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"exp-date-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter card expiration date in MM/YY format"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"exp-date-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter card expiration date in MM/YY format"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("exp-date-tooltip","Enter card expiration date in MM/YY format");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "exp-date-tooltip": "Enter card expiration date in MM/YY format"
+        });</code></pre>
                 <h4 class="name" id="first-name-placeholder"><span class="type-signature"></span>first-name-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in first name input field when first name has not yet been entered
                 </div>
@@ -593,12 +622,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"first-name-placeholder"</span><span
-              class="pun">,</span><span class="str">"First name"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"first-name-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"First name"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("first-name-placeholder","First name");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "first-name-placeholder": "First name"
+        });</code></pre>
                 <h4 class="name" id="first-name-tooltip"><span class="type-signature"></span>first-name-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder first name input field
                 </div>
@@ -617,12 +646,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"first-name-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter first name exactly as it appears on your card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"first-name-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter name exactly as it appears on your card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("first-name-tooltip","Enter first name exactly as it appears on your card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "first-name-tooltip": "Enter name exactly as it appears on your card"
+        });</code></pre>
                 <h4 class="name" id="heading-text"><span class="type-signature"></span>heading-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in the haader section of the payment popup form
                 </div>
@@ -641,12 +670,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"heading-text"</span><span class="pun">,</span><span
-              class="str">"ACME Cogs and Widgets"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"heading-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ACME Cogs and Widgets"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("heading-text","ACME Cogs and Widgets");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "heading-text": "ACME Cogs and Widgets"
+        });</code></pre>
                 <h4 class="name" id="invalid-message"><span class="type-signature"></span>invalid-message<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in the error bar when invalid form entries are found.
                 </div>
@@ -665,12 +694,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"invalid-message"</span><span class="pun">,</span><span
-              class="str">"Fix errors below and try again."</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"invalid-message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Fix errors below and try again."</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("invalid-message","Fix errors below and try again.");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "invalid-message": "Fix errors below and try again."
+        });</code></pre>
                 <h4 class="name" id="last-name-placeholder"><span class="type-signature"></span>last-name-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in name input field when last name has not yet been entered
                 </div>
@@ -689,12 +718,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"last-name-placeholder"</span><span
-              class="pun">,</span><span class="str">"Last name"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"last-name-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Last name"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("last-name-placeholder","Last name");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "last-name-placeholder": "Last name"
+        });</code></pre>
                 <h4 class="name" id="last-name-tooltip"><span class="type-signature"></span>last-name-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder last name input field
                 </div>
@@ -713,12 +742,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"last-name-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter last name exactly as it appears on your card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"last-name-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter name exactly as it appears on your card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("last-name-tooltip","Enter last name exactly as it appears on your card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "last-name-tooltip": "Enter name exactly as it appears on your card"
+        });</code></pre>
                 <h4 class="name" id="order-id"><span class="type-signature"></span>order-id<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     Optional property to set an order id that will be stored with the transaction. This is a searchable field when
                     using Clearent's Virtual Terminal to research transaction data.
@@ -738,12 +767,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"order-id"</span><span class="pun">,</span><span
-              class="str">"a12345"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"order-id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"a12345"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("order-id","a12345");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "order-id": "a12345"
+        });</code></pre>
                 <h4 class="name" id="pay-button-parent"><span class="type-signature"></span>pay-button-parent<span class="type-signature"> :string|HTMLElement</span></h4>
+
                 <div class="description">
                     The id or element reference of the element that the "Pay Now" button will be instantiated within. The newly created
                     button is added as the last child of the specified element. If omitted, the "Pay Now" button will be instantiated at the location
@@ -766,18 +795,16 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"pay-button-parent"</span><span class="pun">,</span><span
-              class="str">"foo"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"pay-button-parent"</span><span class="pun">,</span><span
-              class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">));</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"pay-button-parent"</span><span class="pun">:</span><span class="str">"foo"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"pay-button-parent"</span><span class="pun">:</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"foo"</span><span
-              class="pun">)</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("pay-button-parent","foo");</code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("pay-button-parent",document.getElementById("foo"));</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "pay-button-parent":"foo"
+        });</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "pay-button-parent":document.getElementById("foo")
+        });</code></pre>
                 <h4 class="name" id="pay-button-text"><span class="type-signature"></span>pay-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear on the button that launches the payment popup form
                 </div>
@@ -796,12 +823,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"pay-button-text"</span><span class="pun">,</span><span
-              class="str">"Show Payment Form"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"pay-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Show Payment Form"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("pay-button-text","Show Payment Form");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "pay-button-text": "Show Payment Form"
+        });</code></pre>
                 <h4 class="name" id="pk"><span class="type-signature"></span>pk<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     public key
                 </div>
@@ -820,12 +847,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"pk"</span><span class="pun">,</span><span class="str">"abcdefg123456"</span><span
-              class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"pk"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"abcdefg123456"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("pk","abcdefg123456");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "pk": "abcdefg123456"
+        });</code></pre>
                 <h4 class="name" id="require-billing-address"><span class="type-signature"></span>require-billing-address<span class="type-signature"> :boolean</span></h4>
+
                 <div class="description">
                     determines if billing address is shown and required on payment popup; if set to true you do not need to set show-billing-address property
                 </div>
@@ -850,12 +877,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"require-billing-address"</span><span class="pun">,</span><span
-              class="pln"> </span><span class="kwd">true</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"require-billing-address"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("require-billing-address", true);</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "require-billing-address": true
+        });</code></pre>
                 <h4 class="name" id="save-card-option-text"><span class="type-signature"></span>save-card-option-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to show next to "save this card" option checkbox
                 </div>
@@ -880,12 +907,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"save-card-option-text"</span><span
-              class="pun">,</span><span class="str">"Save this card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"save-card-option-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Save this card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("save-card-option-text","Save this card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "save-card-option-text": "Save this card"
+        });</code></pre>
                 <h4 class="name" id="show-billing-address"><span class="type-signature"></span>show-billing-address<span class="type-signature"> :boolean</span></h4>
+
                 <div class="description">
                     determines if billing address is shown on payment popup
                 </div>
@@ -910,12 +937,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"show-billing-address"</span><span
-              class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"show-billing-address"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("show-billing-address", true);</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "show-billing-address": true
+        });</code></pre>
                 <h4 class="name" id="show-save-card-option"><span class="type-signature"></span>show-save-card-option<span class="type-signature"> :boolean</span></h4>
+
                 <div class="description">
                     determines if "save this card" option checkbox is available
                 </div>
@@ -940,12 +967,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"show-save-card-option"</span><span
-              class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"show-save-card-option"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("show-save-card-option", true);</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "show-save-card-option": true
+        });</code></pre>
                 <h4 class="name" id="state-placeholder"><span class="type-signature"></span>state-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in state input field when state value has not yet been entered
                 </div>
@@ -964,12 +991,12 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"state-placeholder"</span><span class="pun">,</span><span
-              class="str">"Select state"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"state-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Select state"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("state-placeholder","Select state");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "state-placeholder": "Select state"
+        });</code></pre>
                 <h4 class="name" id="state-tooltip"><span class="type-signature"></span>state-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder state input field
                 </div>
@@ -988,14 +1015,14 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"state-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter name exactly as it appears on your card"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"state-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter name exactly as it appears on your card"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("state-tooltip","Enter name exactly as it appears on your card");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "state-tooltip": "Enter name exactly as it appears on your card"
+        });</code></pre>
                 <h4 class="name" id="submit-pay-button-text"><span class="type-signature"></span>submit-pay-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
-                    text to appear on the payment popup form's submit button; {$} is replaced with Clearent.amount at runtime (if set)
+                    text to appear on the payment popup form's submit button; {$} is replaced with amount at runtime (if set)
                 </div>
                 <h5>Type:</h5>
                 <ul>
@@ -1018,16 +1045,14 @@
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"submit-pay-button-text"</span><span
-              class="pun">,</span><span class="str">"Make payment of ${$}"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"submit-pay-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Make payment of ${$}"</span><span class="pln">
-</span><span class="pun">});</span><span class="pln">
-
-outputs </span><span class="pun">(</span><span class="pln">assume </span><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">amount </span><span class="pun">==</span><span class="pln"> </span><span
-              class="lit">22.50</span><span class="pun">):</span><span class="pln">
-payment form submit button </span><span class="kwd">with</span><span class="pln"> text</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Make payment of $22.50"</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("submit-pay-button-text","Make payment of ${$}");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "submit-pay-button-text": "Make payment of ${$}"
+        });
+        outputs (assume amount == 22.50):
+        payment form submit button with text: "Make payment of $22.50"</code></pre>
                 <h4 class="name" id="submit-pay-method-button-text"><span class="type-signature"></span>submit-pay-method-button-text<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear on the add payment method popup form's submit button
                 </div>
@@ -1052,12 +1077,12 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"submit-pay-method-button-text"</span><span
-              class="pun">,</span><span class="str">"Save Payment Method"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"submit-pay-method-button-text"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Save Payment Method"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("submit-pay-method-button-text","Save Payment Method");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "submit-pay-method-button-text": "Save Payment Method"
+        });</code></pre>
                 <h4 class="name" id="success-message"><span class="type-signature"></span>success-message<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in the popup when transaction is successful.
                 </div>
@@ -1076,12 +1101,12 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"success-message"</span><span class="pun">,</span><span
-              class="str">"Payment accepted."</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"success-message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Payment accepted."</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("success-message","Payment accepted.");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "success-message": "Payment accepted."
+        });</code></pre>
                 <h4 class="name" id="zip-placeholder"><span class="type-signature"></span>zip-placeholder<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     text to appear in zip code input field when zip code value has not yet been entered
                 </div>
@@ -1100,12 +1125,12 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"zip-placeholder"</span><span class="pun">,</span><span
-              class="str">"Zip code"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"zip-placeholder"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Zip code"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("zip-placeholder","Zip code");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "zip-placeholder": "Zip code"
+        });</code></pre>
                 <h4 class="name" id="zip-tooltip"><span class="type-signature"></span>zip-tooltip<span class="type-signature"> :string</span></h4>
+
                 <div class="description">
                     tooltip to appear when focused on cardholder zip code input field
                 </div>
@@ -1124,13 +1149,13 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Examples</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"zip-tooltip"</span><span class="pun">,</span><span
-              class="str">"Enter your billing zip/postal code"</span><span class="pun">);</span></code></pre>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">"zip-tooltip"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Enter your billing zip/postal code"</span><span class="pln">
-</span><span class="pun">});</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("zip-tooltip","Enter your billing zip/postal code");</code></pre>
+    <pre class="prettyprint"><code>Clearent.payButton({
+        "zip-tooltip": "Enter your billing zip/postal code"
+        });</code></pre>
                 <h3 class="subsection-title">Methods</h3>
                 <h4 class="name" id="addToken"><span class="type-signature"></span>addToken<span class="signature">(obj)</span><span class="type-signature"></span></h4>
+
                 <div class="description">
                     Adds a customer saved token for option of "Select saved card"
                 </div>
@@ -1149,8 +1174,7 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                         <td class="type">
                             <span class="param-type">obj</span>
                         </td>
-                        <td class="description last">
-                            object containing token properties.
+                        <td class="description last">object containing token properties.
                             <h6>Properties</h6>
                             <table class="params">
                                 <thead>
@@ -1177,7 +1201,7 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                                         <span class="param-type">string</span>
                                     </td>
                                     <td class="attributes">
-                                        &lt;optional&gt;<br>
+                                        &lt;optional><br>
                                     </td>
                                     <td class="description last">The card type (MasterCard, Visa, etc) of the specified token.</td>
                                 </tr>
@@ -1187,7 +1211,7 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                                         <span class="param-type">string</span>
                                     </td>
                                     <td class="attributes">
-                                        &lt;optional&gt;<br>
+                                        &lt;optional><br>
                                     </td>
                                     <td class="description last">The description of the card to display to the user when picking a saved card.
                                         ex. "Business travel card". If not provided, the card will appear in the selection as "Card ending in ####" where
@@ -1203,9 +1227,42 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                 <dl class="details">
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"amount"</span><span class="pun">,</span><span
-              class="str">"22.50"</span><span class="pun">);</span></code></pre>
+
+    <pre class="prettyprint"><code>Clearent.addToken({
+        "token":"1111111111111111111111",
+        "cardType":"Visa",
+        "description":"Business travel card"
+        });</code></pre>
+                <h4 class="name" id="getProperty"><span class="type-signature"></span>getProperty<span class="signature">(property)</span><span class="type-signature"></span></h4>
+
+                <div class="description">
+                    Gets a property of the Clearent HPP popup
+                </div>
+                <h5>Parameters:</h5>
+                <table class="params">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th class="last">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="name"><code>property</code></td>
+                        <td class="type">
+                            <span class="param-type">string</span>
+                        </td>
+                        <td class="description last">The property name to get.</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <dl class="details">
+                </dl>
+                <h5>Example</h5>
+                <pre class="prettyprint"><code>Clearent.getProperty("amount");</code></pre>
                 <h4 class="name" id="payButton"><span class="type-signature"></span>payButton<span class="signature">(obj)</span><span class="type-signature"></span></h4>
+
                 <div class="description">
                     Creates the payment button (Pay Now) that is used to launch the popup payment form
                 </div>
@@ -1231,17 +1288,17 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                 <dl class="details">
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="com">// must include clearent script first</span><span class="pln">
-</span><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/javascript"</span><span class="pln"> src</span><span class="pun">=</span><span
-              class="str">"js/clearent.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span><span class="pln">
-</span><span class="str">&lt;script&gt;</span><span class="pln">
-</span><span class="com">// create payment button</span><span class="pln">
- </span><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">payButton</span><span class="pun">({</span><span class="pln">
-     </span><span class="str">"amount"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"22.50"</span><span class="pln">    </span><span class="com">// set amount properety at this time (optional)</span><span
-              class="pln">
- </span><span class="pun">});</span><span class="pln">
-</span><span class="pun">&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></code></pre>
+
+    <pre class="prettyprint"><code>// must include clearent script first
+        &lt;script type="text/javascript" src="js/clearent.js">&lt;/script>
+        &lt;script>
+        // create payment button
+        Clearent.payButton({
+        "amount": "22.50" // set amount properety at this time (optional)
+        });
+        &lt;/script></code></pre>
                 <h4 class="name" id="setProperty"><span class="type-signature"></span>setProperty<span class="signature">(property, value)</span><span class="type-signature"></span></h4>
+
                 <div class="description">
                     Sets a property of the Clearent HPP popup
                 </div>
@@ -1274,14 +1331,15 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                 <dl class="details">
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="typ">Clearent</span><span class="pun">.</span><span class="pln">setProperty</span><span class="pun">(</span><span class="str">"amount"</span><span class="pun">,</span><span
-              class="str">"22.50"</span><span class="pun">);</span></code></pre>
+                <pre class="prettyprint"><code>Clearent.setProperty("amount","22.50");</code></pre>
                 <h3 class="subsection-title">Type Definitions</h3>
-                <h4 class="name" id="ClearentOnError"><span class="type-signature"></span>ClearentOnError<span class="signature">(response)</span><span class="type-signature"></span></h4>
+                <h4 class="name" id="ClearentOnError"><span class="type-signature"></span>ClearentOnError<span class="signature">(responseRaw, ResponseJSON)</span><span class="type-signature"></span></h4>
+
                 <div class="description">
                     Callback on payment response; if defined on host this
                     function is called only if the transaction was not successful.
-                    The function will receive a JSON-formatted response data object.
+                    The function will receive a raw server response as well as a
+                    JSON-formatted response data object.
                 </div>
                 <h5>Parameters:</h5>
                 <table class="params">
@@ -1294,7 +1352,14 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="name"><code>response</code></td>
+                        <td class="name"><code>responseRaw</code></td>
+                        <td class="type">
+                            <span class="param-type">string</span>
+                        </td>
+                        <td class="description last">Raw string from server.</td>
+                    </tr>
+                    <tr>
+                        <td class="name"><code>ResponseJSON</code></td>
                         <td class="type">
                             <span class="param-type">object</span>
                         </td>
@@ -1311,18 +1376,19 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> </span><span class="typ">ClearentOnError</span><span class="pun">(</span><span class="pln">response</span><span class="pun">){</span><span class="pln">
-     console</span><span class="pun">.</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">response</span><span class="pun">);</span><span class="pln">
-     </span><span class="com">// you put whatever code you want to run</span><span class="pln">
-     </span><span class="com">// in this function defined on your page.</span><span class="pln">
-     </span><span class="com">// this code will run after a</span><span class="pln">
-     </span><span class="com">// failed transaction</span><span class="pln">
- </span><span class="pun">}</span></code></pre>
-                <h4 class="name" id="ClearentOnSuccess"><span class="type-signature"></span>ClearentOnSuccess<span class="signature">(response)</span><span class="type-signature"></span></h4>
+
+    <pre class="prettyprint"><code>function ClearentOnError(responseRaw,ResponseJSON){
+        console.log("transaction failed");
+        console.log(responseRaw);
+        console.log(ResponseJSON);
+        }</code></pre>
+                <h4 class="name" id="ClearentOnSuccess"><span class="type-signature"></span>ClearentOnSuccess<span class="signature">(responseRaw, ResponseJSON)</span><span class="type-signature"></span></h4>
+
                 <div class="description">
                     Callback on payment response; if defined on host this
-                    function is called only if the transaction was successful.
-                    The function will receive a JSON-formatted response data object.
+                    function is called only if the transaction was not successful.
+                    The function will receive a raw server response as well as a
+                    JSON-formatted response data object.
                 </div>
                 <h5>Parameters:</h5>
                 <table class="params">
@@ -1335,7 +1401,14 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="name"><code>response</code></td>
+                        <td class="name"><code>responseRaw</code></td>
+                        <td class="type">
+                            <span class="param-type">string</span>
+                        </td>
+                        <td class="description last">Raw string from server.</td>
+                    </tr>
+                    <tr>
+                        <td class="name"><code>ResponseJSON</code></td>
                         <td class="type">
                             <span class="param-type">object</span>
                         </td>
@@ -1352,13 +1425,14 @@ payment form submit button </span><span class="kwd">with</span><span class="pln"
                     </dd>
                 </dl>
                 <h5>Example</h5>
-      <pre class="prettyprint"><code><span class="kwd">function</span><span class="pln"> </span><span class="typ">ClearentOnSuccess</span><span class="pun">(</span><span class="pln">response</span><span class="pun">){</span><span class="pln">
-     console</span><span class="pun">.</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">response</span><span class="pun">);</span><span class="pln">
-     </span><span class="com">// you put whatever code you want to run</span><span class="pln">
-     </span><span class="com">// in this function defined on your page.</span><span class="pln">
-     </span><span class="com">// this code will run after a</span><span class="pln">
-     </span><span class="com">// successful transaction</span><span class="pln">
- </span><span class="pun">}</span></code></pre>
+
+    <pre class="prettyprint"><code>function ClearentOnSuccess(responseRaw,ResponseJSON){
+        console.log("transaction successful");
+        // raw response can be sent back to server to verify that
+        // response signature matches and ressponse came from Clearent
+        console.log(responseRaw);
+        console.log(ResponseJSON);
+        }</code></pre>
             </article>
         </div>
     </section>
