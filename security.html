@@ -17,7 +17,7 @@
     <header>
         <h1>Clearent Hosted Payment Page</h1>
 
-        <p>Clearent Hosted Payment Page - documentation and examples</p>
+        <p>Documentation and examples</p>
 
         <menu>
             <a href="index.html">Overview</a>
@@ -27,16 +27,6 @@
             <a href="examples.html">Examples</a>
         </menu>
 
-        <p class="view"><a href="https://github.com/Clearent/ClearentHPP">View the Project on GitHub
-            <small>Clearent/ClearentHPP</small>
-        </a></p>
-
-        <ul>
-            <li><a href="https://github.com/Clearent/ClearentHPP/zipball/master">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/Clearent/ClearentHPP/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/Clearent/ClearentHPP">View On <strong>GitHub</strong></a></li>
-        </ul>
-
     </header>
     <section>
         <h3>Security Requirements</h3>
@@ -45,6 +35,252 @@
             <li>Do not publish your public Key outside of your code.</li>
             <li>For payments on the hosted payment button will only work on the website you registered when onboarding to a Hosted Payment Account.</li>
         </ul>
+
+        <h3>Transaction Responses</h3>
+
+        <p>The HPP application returns all responses as raw strings and as JSON formatted representations of the raw server responses. These raw transaction responses
+            are signed by Clearent and the can be verified (see "Response Validation" section below). Below are examples of the various types of responses you will see
+            from the HPP application.</p>
+
+        <h4>Successful Transaction</h4>
+
+        <p>Below is an example of a successful response from a basic sale example.</p>
+
+        <xmp>
+{
+   "code":"200",
+   "status":"success",
+   "exchange-id":"ID-CLADEVGSOPS02-cgw01-58790-1447188033740-0-1146",
+   "links":[
+      {
+         "rel":"transaction",
+         "href":"/rest/v2/transactions?id=1107313",
+         "id":"1107313"
+      }
+   ],
+   "payload":{
+      "transaction":{
+         "amount":"3.33",
+         "id":"1107313",
+         "type":"SALE",
+         "result":"APPROVED",
+         "card":"XXXXXXXXXXXX1111",
+         "csc":"999",
+         "authorization-code":"TAS425",
+         "batch-string-id":"165",
+         "display-message":"Transaction approved",
+         "result-code":"000",
+         "exp-date":"1020"
+      },
+      "payloadType":"transaction"
+   },
+   "signature":"30640230679d69790f582c7bb22920eb0541cc84a37f3aa6dcd"
+}
+        </xmp>
+
+        <h4>Successful Transaction With Billing Address Supplied</h4>
+
+        <p>Below is an example of a successful response from a sale example that includes billing address.</p>
+
+        <p>See <a href="global.html">Configuration</a> for more information and
+        <a href="examples.html">Examples</a> for examples using billing address options.</p>
+
+        <xmp>
+{
+   "code":"200",
+   "status":"success",
+   "exchange-id":"ID-CLADEVGSOPS02-cgw01-58790-1447188033740-0-1730",
+   "links":[
+      {
+         "rel":"transaction",
+         "href":"/rest/v2/transactions?id=1107328",
+         "id":"1107328"
+      }
+   ],
+   "payload":{
+      "transaction":{
+         "amount":"3.33",
+         "id":"1107328",
+         "type":"SALE",
+         "result":"APPROVED",
+         "billing":{
+            "street":"333 Oak Trail",
+            "city":"Springfield",
+            "state":"ME",
+            "zip":"55105",
+            "first-name":"Joe",
+            "last-name":"Burns"
+         },
+         "card":"XXXXXXXXXXXX1111",
+         "csc":"999",
+         "authorization-code":"TAS902",
+         "avs-result-code":"Y",
+         "batch-string-id":"166",
+         "display-message":"Transaction approved",
+         "result-code":"000",
+         "exp-date":"1019"
+      },
+      "payloadType":"transaction"
+   },
+   "signature":"3064dcb5feaffadfc237835272c7685"
+}
+        </xmp>
+
+        <h4>Failed Transaction</h4>
+
+        <p>Below is an example of a failed transaction response.</p>
+
+        <xmp>
+{
+   "code":"402",
+   "status":"fail",
+   "exchange-id":"ID-CLADEVGSOPS02-cgw01-58790-1447188033740-0-1169",
+   "links":[
+      {
+         "rel":"transaction",
+         "href":"/rest/v2/transactions?id=1107315",
+         "id":"1107315"
+      }
+   ],
+   "payload":{
+      "transaction":{
+         "amount":"3.33",
+         "id":"1107315",
+         "type":"SALE",
+         "result":"INVALID_REQUEST",
+         "card":"XXXXXXXXXXXX1111",
+         "csc":"666",
+         "display-message":"Declined by Issuer - Invalid card security code",
+         "result-code":"018",
+         "exp-date":"1020"
+      },
+      "error":{
+         "error-message":"INVALID_REQUESTSYSTEM_ERROR_OTHER HPP Request",
+         "result-code":"073"
+      },
+      "payloadType":"error"
+   },
+   "signature":"306402b09b373a84edbb935ed11a6849a6711ba4c16abe1338dd6f"
+}
+        </xmp>
+
+        <h4>Unauthorized Request (No Transaction Attempted)</h4>
+
+        <p>If an invalid, disabled, or expired key is used, not transaction is attempted and the error response will not include transaction data.</p>
+
+        <xmp>
+{
+   "code":"401",
+   "status":"fail",
+   "payload":{
+      "error":{
+         "error-message":"UNAUTHORIZED",
+         "result-code":"042",
+         "time-stamp":"Tue Nov 10 21:24:04 UTC 2015"
+      },
+      "payloadType":"error"
+   }
+}
+        </xmp>
+
+        <h4>Successful Sale With Token</h4>
+
+        <p>Below is an example of a successful response from a sale with the option to save the card for future use selected.</p>
+
+        <p>See <a href="global.html">Configuration</a> for more information and
+            <a href="examples.html">Examples</a> for examples of saving cards for future use.</p>
+
+        <xmp>
+{
+   "code":"200",
+   "status":"success",
+   "exchange-id":"ID-CLADEVGSOPS02-cgw01-58790-1447188033740-0-1125",
+   "links":[
+      {
+         "rel":"transaction",
+         "href":"/rest/v2/transactions?id=1107310",
+         "id":"1107310"
+      },
+      {
+         "rel":"token",
+         "href":"/rest/v2/tokens/1100845274213121111",
+         "id":"1136587273219921111"
+      }
+   ],
+   "payload":{
+      "transaction":{
+         "amount":"64.50",
+         "id":"1107310",
+         "type":"SALE",
+         "result":"APPROVED",
+         "billing":{
+            "street":"222 Main Street",
+            "city":"Springfield",
+            "state":"ME",
+            "zip":"55105",
+            "first-name":"John",
+            "last-name":"Adams"
+         },
+         "card":"XXXXXXXXXXXX1111",
+         "csc":"999",
+         "authorization-code":"TAS403",
+         "avs-result-code":"Y",
+         "batch-string-id":"165",
+         "display-message":"Transaction approved",
+         "result-code":"000",
+         "exp-date":"1019"
+      },
+      "payloadType":"transaction"
+   },
+   "signature":"306502310087aaee89b8c706ceb98c986b4de66a5"
+}
+        </xmp>
+
+        <h4>Successful Token Request</h4>
+
+        <p>Below is an example of a successful response from a token-only request.</p>
+
+        <p>See <a href="global.html">Configuration</a> for more information and
+            <a href="examples.html">Examples</a> for examples using a token-only request.</p>
+
+        <xmp>
+{
+   "code":"200",
+   "status":"success",
+   "exchange-id":"ID-CLADEVGSOPS02-cvl01-59475-1447185739748-0-163",
+   "payload":{
+      "tokenResponse":{
+         "created":"2015-11-10T21:03:20.518Z",
+         "token-id":"1145845280641111111",
+         "times-used":"0",
+         "status":"Active",
+         "last-four-digits":"1111",
+         "card-type":"VISA",
+         "description":"Travel Visa",
+         "avs-address":"123 Maple Lane",
+         "avs-zip":"55105",
+         "avs-result-code":"Y"
+      },
+      "payloadType":"token"
+   }
+}
+        </xmp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <h3>Response Validation</h3>
 
@@ -136,7 +372,6 @@
         </script>
         </xmp>
 
-
         <h3>Browser Support</h3>
 
         <p>
@@ -151,7 +386,7 @@
             you have questions about any errors you receive.</p>
 
         <p>Example:
-            <xmp><exchange-id>ID-5ba9fd2f10ea-59988-1441133412260-0-1343</exchange-id></xmp>
+            <xmp>"exchange-id":"ID-5ba9fd2f10ea-59988-1441133412260-0-1343"</xmp>
         </p>
         <p></p>
 
