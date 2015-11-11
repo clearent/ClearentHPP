@@ -186,7 +186,8 @@
         <script>
         function ClearentOnSuccess(responseRaw,ResponseJSON){
 
-            // if you set the card-token-only option on your page you can get the token information back like this
+            // if you set the card-token-only option on your page you can get the
+            // token information back like this
             if(ResponseJSON.payload && ResponseJSON.payload.tokenResponse){
                 var tokenResponse = ResponseJSON.payload.tokenResponse;
                 console.log('token-id = ' + tokenResponse['token-id']);
@@ -194,7 +195,8 @@
                 console.log('token description = ' + tokenResponse['description']);
             }
 
-            // if you set the show-save-card-option on your page AND the user chose to save their card you can get the token information back like this
+            // if you set the show-save-card-option on your page AND the user chose
+            // to save their card you can get the token information back like this
             if(ResponseJSON.links){
                 var links = ResponseJSON.links;
                 for (var i= 0;i<links.length;i++){
