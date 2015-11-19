@@ -38,6 +38,7 @@
 
           <ul>
             <li>Include a link to the clearent.js script (Sandbox testing link shown below).</li>
+            <li>Script link <strong>must</strong> have an id of "clearent-hpp". See example below. </strong></li>
             <li>Set your Clearent-provided public key and sale amount.</li>
             <li>Call the Clearent.payButton() method.</li>
           </ul>
@@ -47,7 +48,7 @@
         <p>This code . . . </p>
 
         <xmp>
-        <script type="text/javascript" src="https://hpp-sb.clearent.net/js/clearent.js"></script>
+        <script type="text/javascript" id="clearent-hpp" src="https://hpp-sb.clearent.net/js/clearent.js"></script>
         <script>
           Clearent.payButton({"pk":"307a301406072a864.....8ce3d076fde833c136b", "amount": "64.50"});
         </script>
