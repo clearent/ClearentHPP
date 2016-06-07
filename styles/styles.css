@@ -7,33 +7,8 @@ body {
   font-weight:300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
+p, ul, ol, table {
   margin:0 0 20px;
-}
-
-p, ul, ol, table, dl {
-  margin:0 0 20px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-
-h4, h5, h6 {
-  color:#39c;
 }
 
 a {
@@ -70,11 +45,6 @@ th, td {
   text-align:left;
   padding:5px 10px;
   border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
 }
 
 th {
@@ -177,11 +147,20 @@ header menu a {
   font-size: 14px;
 }
 
+/* pseudo-class order is important */
+/* a:link - a:visited - a:hover - a:active */
+
 header menu a:hover  {
   text-decoration: underline;
+  color:#000;
 }
 
 header menu a.active {
+  color:#39c;
+}
+
+header menu a:focus  {
+  outline: none !important;
   color:#39c;
 }
 
@@ -213,13 +192,6 @@ section {
 
 small {
   font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
 }
 
 footer {
