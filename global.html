@@ -1542,6 +1542,41 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 });</pre>
                     </dd>
                     <hr>
+                    <dt class="name" id="mask-entry">
+                        <h4 id="mask-entry"><span class="type-signature"></span>mask-entry<span class="type-signature"> :boolean</span></h4>
+                    </dt>
+                    <dd>
+                        <div class="description">
+                            Masks entry of Card Number, Expiration Date and Card Security Code fields. When the field has
+                            focus you can see the data, when the field loses focus, the data is obfuscated.
+                        </div>
+                        <h5>Type:</h5>
+                        <ul>
+                            <li>
+                                <span class="param-type">boolean</span>
+                            </li>
+                        </ul>
+                        <dl class="details">
+                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                            <dd class="tag-since">
+                                <ul class="dummy">
+                                    <li>1.2018.02.28</li>
+                                </ul>
+                            </dd>
+                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                            <dd class="tag-default">
+                                <ul class="dummy">
+                                    <li>true</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <h5>Examples</h5>
+                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;mask-entry&quot;, false);</pre>
+                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;mask-entry&quot;: false
+});</pre>
+                    </dd>
+                    <hr>
                     <dt class="name" id="order-id">
                         <h4 id="order-id"><span class="type-signature"></span>order-id<span class="type-signature"> :string</span></h4>
                     </dt>
@@ -2741,7 +2776,8 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                             </dd>
                         </dl>
                         <h5>Examples</h5>
-                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-last-name-tooltip&quot;,&quot;Enter last name exactly as it appears on your card&quot;);</pre>
+                        <pre
+                                class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-last-name-tooltip&quot;,&quot;Enter last name exactly as it appears on your card&quot;);</pre>
                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;shipping-last-name-tooltip&quot;: &quot;Enter name exactly as it appears on your card&quot;
 });</pre>
