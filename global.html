@@ -3587,6 +3587,43 @@ payment form submit button with text: &quot;Make payment of $22.50&quot;</pre>
 });</pre>
                     </dd>
                     <hr>
+                    <dt class="name" id="tooltip-mode">
+                        <h4 id="tooltip-mode"><span class="type-signature"></span>tooltip-mode<span class="type-signature"> :string</span></h4>
+                    </dt>
+                    <dd>
+                        <div class="description">
+                            Determines how tooltips are show;
+                            hover = show when mouse hovers a field with a defined tooltip
+                            focus = show when a field with a defined tooltip gets focus
+                            none = tooltips are not shown on any fields even if tooltip is defined for field
+                        </div>
+                        <h5>Type:</h5>
+                        <ul>
+                            <li>
+                                <span class="param-type">string</span>
+                            </li>
+                        </ul>
+                        <dl class="details">
+                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                            <dd class="tag-since">
+                                <ul class="dummy">
+                                    <li>1.2018.02.16</li>
+                                </ul>
+                            </dd>
+                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                            <dd class="tag-default">
+                                <ul class="dummy">
+                                    <li>focus</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <h5>Examples</h5>
+                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;tooltip-mode&quot;,&quot;hover&quot;);</pre>
+                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;tooltip-mode&quot;: &quot;hover&quot;
+});</pre>
+                    </dd>
+                    <hr>
                     <dt class="name" id="track-format">
                         <h4 id="track-format"><span class="type-signature"></span>track-format<span class="type-signature"> :string</span></h4>
                     </dt>
@@ -3594,7 +3631,7 @@ payment form submit button with text: &quot;Make payment of $22.50&quot;</pre>
                         <div class="description">
                             track-format of swiper to be used. This field is required when using card swipes.
                             Contact your Clearent representative for supported swipe readers.
-                            Supported formats include: MAGTEK, TRACK2
+                            Supported formats include: MAGTEK, IDTECH, TRACK2
                         </div>
                         <h5>Type:</h5>
                         <ul>
@@ -3727,7 +3764,7 @@ payment form submit button with text: &quot;Make payment of $22.50&quot;</pre>
                     </dt>
                     <dd>
                         <div class="description">
-                            Adds a customer saved token for option of "Select saved card"
+                            Adds a customer saved token for option of "Select saved card".
                         </div>
                         <h5>Parameters:</h5>
                         <table class="params table table-striped">
@@ -3865,13 +3902,15 @@ payment form submit button with text: &quot;Make payment of $22.50&quot;</pre>
                         <dl class="details">
                         </dl>
                         <h5>Example</h5>
-                        <pre class="sunlight-highlight-javascript">// must include clearent script first
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/clearent.js&quot;&gt;&lt;/script&gt;
+                        <pre class="sunlight-highlight-javascript">// Sandbox URL for testing; use Sandbox public key
+&lt;script type=&quot;text/javascript&quot; id=&quot;clearent-hpp&quot; src=&quot;https://hpp-sb.clearent.net/js/clearent.js&quot;&gt;&lt;/script&gt;
+// Production URL for live transactions; use Production public key
+&lt;script type=&quot;text/javascript&quot; id=&quot;clearent-hpp&quot; src=&quot;https://hpp.clearent.net/js/clearent.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 // create payment button
- Clearent.payButton({
-     &quot;amount&quot;: &quot;22.50&quot;    // set amount properety at this time (optional)
- });
+Clearent.payButton({
+   &quot;pk&quot;: &quot;your public key goes here&quot;
+});
 &lt;/script&gt;</pre>
                     </dd>
                     <hr>
