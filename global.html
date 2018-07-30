@@ -41,6 +41,12 @@
       padding-bottom:0;
     }
 
+    h4{
+      color:#CBA135;
+      font-weight: bold;
+      font-size:1.9em;
+    }
+
   </style>
 </head>
 <body>
@@ -85,6 +91,670 @@
                 </div>
                 <h3 class="subsection-title">Members</h3>
                 <dl>
+                  <hr>
+                  <dt class="name" id="ach-account-name-label">
+                    <h4 id="ach-account-name-label"><span class="type-signature"></span>ach-account-name-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach Name on account field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Name on account</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-name-label&quot;,&quot;Enter Name on account below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-name-label&quot;: &quot;Enter Name on account below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-name-placeholder">
+                    <h4 id="ach-account-name-placeholder"><span class="type-signature"></span>ach-account-name-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in account name input field when value has not yet been entered; account name input is shown if value has been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Name on account</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-name-placeholder&quot;,&quot;Enter name on account&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-name-placeholder&quot;: &quot;Enter name on account&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-name-tooltip">
+                    <h4 id="ach-account-name-tooltip"><span class="type-signature"></span>ach-account-name-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-account-name input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-name-tooltip&quot;,&quot;Enter name associated with this account&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-name-tooltip&quot;: &quot;Enter name associated with this account&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-number-label">
+                    <h4 id="ach-account-number-label"><span class="type-signature"></span>ach-account-number-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach account number field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Account number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-number-label&quot;,&quot;Enter account number below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-number-label&quot;: &quot;Enter account number below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-number-placeholder">
+                    <h4 id="ach-account-number-placeholder"><span class="type-signature"></span>ach-account-number-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in account number input field when value has not yet been entered; account number input is shown if value has been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Account number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-number-placeholder&quot;,&quot;Enter account number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-number-placeholder&quot;: &quot;Enter account number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-number-tooltip">
+                    <h4 id="ach-account-number-tooltip"><span class="type-signature"></span>ach-account-number-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-account-number input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-number-tooltip&quot;,&quot;Enter account number as it appears on your checking/savings account&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-routing-account-tooltip&quot;: &quot;Enter account number as it appears on your checking/savings account&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-type-label">
+                    <h4 id="ach-account-type-label"><span class="type-signature"></span>ach-account-type-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach account type selector when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Account type</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-type-label&quot;,&quot;Select account type&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-type-label&quot;: &quot;Select account type&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-type-placeholder">
+                    <h4 id="ach-account-type-placeholder"><span class="type-signature"></span>ach-account-type-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in ach account type selector when state value has not yet been selected
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Account type</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-type-placeholder&quot;,&quot;Select account type&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-type-placeholder&quot;: &quot;Select account type&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-account-type-tooltip">
+                    <h4 id="ach-account-type-tooltip"><span class="type-signature"></span>ach-account-type-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-account-type selector
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-account-type-tooltip&quot;,&quot;Enter amount in $xx.xx format&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-account-type-tooltip&quot;: &quot;Enter amount in $xx.xx format&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-amount-label">
+                    <h4 id="ach-amount-label"><span class="type-signature"></span>ach-amount-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach amount input field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Amount</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#enable-ach">enable-ach</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-amount-label&quot;,&quot;Enter amount below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-amount-label&quot;: &quot;Enter amount below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-amount-placeholder">
+                    <h4 id="ach-amount-placeholder"><span class="type-signature"></span>ach-amount-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in amount input field when amount value has not yet been entered; amount input is shown if amount has not been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Enter amount</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#amount">amount</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-amount-placeholder&quot;,&quot;Enter donation amount&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-amount-placeholder&quot;: &quot;Enter donation amount&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-amount-tooltip">
+                    <h4 id="ach-amount-tooltip"><span class="type-signature"></span>ach-amount-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-amount input field; amount input is shown if amount has not been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#amount">amount</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-amount-tooltip&quot;,&quot;Enter amount in $xx.xx format&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-amount-tooltip&quot;: &quot;Enter amount in $xx.xx format&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-check-number-label">
+                    <h4 id="ach-check-number-label"><span class="type-signature"></span>ach-check-number-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach check number selector when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Check number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-check-number-label&quot;,&quot;Enter check number below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-check-number-label&quot;: &quot;Enter check number below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-check-number-placeholder">
+                    <h4 id="ach-check-number-placeholder"><span class="type-signature"></span>ach-check-number-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in check number input field when value has not yet been entered; check number input is shown if value has been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Check number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-check-number-placeholder&quot;,&quot;Enter check number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-check-number-placeholder&quot;: &quot;Enter check number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-check-number-required">
+                    <h4 id="ach-check-number-required"><span class="type-signature"></span>ach-check-number-required<span class="type-signature"> :boolean</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      Determines if check-number field is required.
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">boolean</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>false</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-check-number-required&quot;,true);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-check-number-required&quot;: true
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-check-number-tooltip">
+                    <h4 id="ach-check-number-tooltip"><span class="type-signature"></span>ach-check-number-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-check-number input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-check-number-tooltip&quot;,&quot;Enter check number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-check-account-tooltip&quot;: &quot;Enter check number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-routing-number-label">
+                    <h4 id="ach-routing-number-label"><span class="type-signature"></span>ach-routing-number-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above ach routing number field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Routing number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-routing-number-label&quot;,&quot;Enter routing number below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-routing-number-label&quot;: &quot;Enter routing number below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-routing-number-placeholder">
+                    <h4 id="ach-routing-number-placeholder"><span class="type-signature"></span>ach-routing-number-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in routing number input field when value has not yet been entered; routing number input is shown if value has been set when displaying payment form
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Routing number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-routing-number-placeholder&quot;,&quot;Enter routing number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-routing-number-placeholder&quot;: &quot;Enter routing number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="ach-routing-number-tooltip">
+                    <h4 id="ach-routing-number-tooltip"><span class="type-signature"></span>ach-routing-number-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when hovering over or focused on ach-routing-number input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;ach-routing-number-tooltip&quot;,&quot;Enter router number as it appears on your checking/savings account&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;ach-routing-number-tooltip&quot;: &quot;Enter router number as it appears on your checking/savings account&quot;
+});</pre>
+                  </dd>
                   <hr>
                   <dt class="name" id="add-payment-button-text">
                     <h4 id="add-payment-button-text"><span class="type-signature"></span>add-payment-button-text<span class="type-signature"> :string</span></h4>
@@ -1574,6 +2244,40 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 });</pre>
                   </dd>
                   <hr>
+                  <dt class="name" id="enable-ach">
+                    <h4 id="enable-ach"><span class="type-signature"></span>enable-ach<span class="type-signature"> :boolean</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      enables the option for the customer to pay with online-check.
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">boolean</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>false</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;enable-ach&quot;, true);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;enable-ach&quot;: true
+});</pre>
+                  </dd>
+                  <hr>
                   <dt class="name" id="error-message">
                     <h4 id="error-message"><span class="type-signature"></span>error-message<span class="type-signature"> :string</span></h4>
                   </dt>
@@ -2100,8 +2804,8 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                   </dt>
                   <dd>
                     <div class="description">
-                      Masks entry of Card Number, Expiration Date and Card Security Code fields. When the field has
-                      focus you can see the data, when the field loses focus, the data is obfuscated.
+                      Masks entry of Card Number, Expiration Date, Card Security Code, Routing Number and Account number fields.
+                      When the field has focus you can see the data, when the field loses focus, the data is obfuscated.
                     </div>
                     <h5>Type:</h5>
                     <ul>
@@ -2323,7 +3027,7 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
     &quot;pay-button-parent&quot;:&quot;paymentDiv&quot;
 });</pre>
                     <pre class="sunlight-highlight-javascript">Clearent.payButton({
-    &quot;pay-button-parent&quot;:document.getElementById(&quot;payment-div&quot;&quot;)
+    &quot;pay-button-parent&quot;:document.getElementById(&quot;payment-div&quot;)
 });</pre>
                   </dd>
                   <hr>
@@ -2352,6 +3056,176 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                     <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;pay-button-text&quot;,&quot;Show Payment Form&quot;);</pre>
                     <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;pay-button-text&quot;: &quot;Show Payment Form&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="payment-label-ach">
+                    <h4 id="payment-label-ach"><span class="type-signature"></span>payment-label-ach<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      Label for choosing check payment when ach is enabled
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Pay by Check</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#enable-ach">enable-ach</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;payment-label-ach&quot;, &quot;Pay by Check&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;payment-label-ach&quot;: &quot;Pay by Check&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="payment-label-credit">
+                    <h4 id="payment-label-credit"><span class="type-signature"></span>payment-label-credit<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      Label for choosing credit payment when ach is enabled
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.07.27</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Credit/Debit</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#enable-ach">enable-ach</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;payment-label-credit&quot;, &quot;Pay by Card&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;payment-label-credit&quot;: &quot;Pay by Card&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="phone-label">
+                    <h4 id="phone-label"><span class="type-signature"></span>phone-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above billing address, phone input field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.05.04</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Phone number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;phone-label&quot;,&quot;Enter phone number below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;phone-label&quot;: &quot;Enter Phone below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="phone-placeholder">
+                    <h4 id="phone-placeholder"><span class="type-signature"></span>phone-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in billing address phone input field when phone number value has not yet been entered
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Phone</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;phone-placeholder&quot;,&quot;Phone code&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;phone-placeholder&quot;: &quot;Phone number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="phone-tooltip">
+                    <h4 id="phone-tooltip"><span class="type-signature"></span>phone-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when focused on billing address phone code input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;phone-tooltip&quot;,&quot;Enter your billing phone number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;phone-tooltip&quot;: &quot;Enter your billing phone number&quot;
 });</pre>
                   </dd>
                   <hr>
@@ -2622,6 +3496,12 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                       </li>
                     </ul>
                     <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.06.14</li>
+                        </ul>
+                      </dd>
                       <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
                       <dd class="tag-default">
                         <ul class="dummy">
@@ -2876,6 +3756,49 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 });</pre>
                   </dd>
                   <hr>
+                  <dt class="name" id="require-phone">
+                    <h4 id="require-phone"><span class="type-signature"></span>require-phone<span class="type-signature"> :boolean</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      determines if billing phone number is required. If require-billing-address or show-billing-address are true, the phone number will not be required by default. You
+                      must set this field to true to require the customer to enter a billing phone number
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">boolean</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2016.06.02</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>false</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#show-order-id">show-order-id</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;require-billing-address&quot;, true);
+Clearent.setProperty(&quot;require-phone&quot;, true);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;require-billing-address&quot;: true,
+    &quot;require-phone&quot;: true
+});</pre>
+                  </dd>
+                  <hr>
                   <dt class="name" id="require-purchase-order">
                     <h4 id="require-purchase-order"><span class="type-signature"></span>require-purchase-order<span class="type-signature"> :boolean</span></h4>
                   </dt>
@@ -2993,6 +3916,49 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                     <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;require-shipping-address&quot;, true);</pre>
                     <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;require-shipping-address&quot;: true
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="require-shipping-phone">
+                    <h4 id="require-shipping-phone"><span class="type-signature"></span>require-shipping-phone<span class="type-signature"> :boolean</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      determines if shipping phone number is required. If require-shipping-address or show-shipping-address are true, the phone number will not be required by default.
+                      You must set this field to true to require the customer to enter a shipping phone number
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">boolean</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2016.06.02</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>false</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                      <dd class="tag-see">
+                        <ul>
+                          <li><a href="global.html#show-order-id">show-order-id</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;require-shipping-address&quot;, true);
+Clearent.setProperty(&quot;require-shipping-phone&quot;, true);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;require-shipping-address&quot;: true,
+    &quot;require-shipping-phone&quot;: true
 });</pre>
                   </dd>
                   <hr>
@@ -3626,6 +4592,96 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 });</pre>
                   </dd>
                   <hr>
+                  <dt class="name" id="shipping-phone-label">
+                    <h4 id="shipping-phone-label"><span class="type-signature"></span>shipping-phone-label<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear above shipping address, phone input field when show-labels is turned on
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                      <dd class="tag-since">
+                        <ul class="dummy">
+                          <li>1.2018.05.04</li>
+                        </ul>
+                      </dd>
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Phone number</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-phone-label&quot;,&quot;Enter phone number below&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;shipping-phone-label&quot;: &quot;Enter Phone below&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="shipping-phone-placeholder">
+                    <h4 id="shipping-phone-placeholder"><span class="type-signature"></span>shipping-phone-placeholder<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      text to appear in shipping address phone input field when phone number value has not yet been entered
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>Phone</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-phone-placeholder&quot;,&quot;Phone code&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;shipping-phone-placeholder&quot;: &quot;Phone number&quot;
+});</pre>
+                  </dd>
+                  <hr>
+                  <dt class="name" id="shipping-phone-tooltip">
+                    <h4 id="shipping-phone-tooltip"><span class="type-signature"></span>shipping-phone-tooltip<span class="type-signature"> :string</span></h4>
+                  </dt>
+                  <dd>
+                    <div class="description">
+                      tooltip to appear when focused on shipping address phone code input field
+                    </div>
+                    <h5>Type:</h5>
+                    <ul>
+                      <li>
+                        <span class="param-type">string</span>
+                      </li>
+                    </ul>
+                    <dl class="details">
+                      <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                      <dd class="tag-default">
+                        <ul class="dummy">
+                          <li>(empty string)</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <h5>Examples</h5>
+                    <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-phone-tooltip&quot;,&quot;Enter your shipping phone number&quot;);</pre>
+                    <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;shipping-phone-tooltip&quot;: &quot;Enter your shipping phone number&quot;
+});</pre>
+                  </dd>
+                  <hr>
                   <dt class="name" id="shipping-state-label">
                     <h4 id="shipping-state-label"><span class="type-signature"></span>shipping-state-label<span class="type-signature"> :string</span></h4>
                   </dt>
@@ -3665,7 +4721,7 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                   </dt>
                   <dd>
                     <div class="description">
-                      text to appear in shipping address state input field when state value has not yet been entered
+                      text to appear in shipping address state selector when state value has not yet been selected
                     </div>
                     <h5>Type:</h5>
                     <ul>
@@ -4483,7 +5539,7 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                   </dt>
                   <dd>
                     <div class="description">
-                      text to appear in billing address state input field when state value has not yet been entered
+                      text to appear in billing address state selector when state value has not yet been selected
                     </div>
                     <h5>Type:</h5>
                     <ul>
