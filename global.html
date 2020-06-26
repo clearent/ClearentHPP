@@ -1471,6 +1471,63 @@
 });</pre>
                                     </dd>
                                     <hr>
+                                    <dt class="name" id="billing-address">
+                                        <h4 id="billing-address"><span class="type-signature"></span>billing-address<span class="type-signature"> :object</span></h4>
+                                    </dt>
+                                    <dd>
+                                        <div class="description">
+                                            Optional property to set the billing address. If billing address fields are shown, this property is used to pre-populate the fields.
+                                        </div>
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">object</span>
+                                            </li>
+                                        </ul>
+                                        <dl class="details">
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2020.06.17</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>(null)</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                                            <dd class="tag-see">
+                                                <ul>
+                                                    <li><a href="global.html#show-billing-address">show-billing-address</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <h5>Examples</h5>
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;billing-address&quot;,
+     {
+        &quot;first-name&quot;:&quot;John&quot;,
+        &quot;last-name&quot;:&quot;Backus&quot;,
+        &quot;street&quot;:&quot;123 Billing St.&quot;,
+        &quot;city&quot;:&quot;Richmond&quot;,
+        &quot;state&quot;:&quot;MO&quot;,
+        &quot;zip&quot;:&quot;85284&quot;,
+        &quot;phone&quot;:&quot;314-555-1212&quot;
+    });</pre>
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;billing-address&quot;:{
+        &quot;first-name&quot;:&quot;John&quot;,
+        &quot;last-name&quot;:&quot;Backus&quot;,
+        &quot;street&quot;:&quot;123 Billing St.&quot;,
+        &quot;city&quot;:&quot;Richmond&quot;,
+        &quot;state&quot;:&quot;MO&quot;,
+        &quot;zip&quot;:&quot;85284&quot;,
+        &quot;phone&quot;:&quot;314-555-1212&quot;
+    }
+});</pre>
+                                    </dd>
+                                    <hr>
                                     <dt class="name" id="billing-address-label">
                                         <h4 id="billing-address-label"><span class="type-signature"></span>billing-address-label<span class="type-signature"> :string</span></h4>
                                     </dt>
@@ -1502,6 +1559,46 @@
                                         <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;billing-address-label&quot;,&quot;Address&quot;);</pre>
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;billing-address-label&quot;: &quot;Address&quot;
+});</pre>
+                                    </dd>
+                                    <hr>
+                                    <dt class="name" id="billing-zip">
+                                        <h4 id="billing-zip"><span class="type-signature"></span>billing-zip<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+                                        <div class="description">
+                                            Optional property to set a zip code. If zip code field is shown, this property is used to pre-populate the field.
+                                        </div>
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">string</span>
+                                            </li>
+                                        </ul>
+                                        <dl class="details">
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2020.06.17</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>(null)</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                                            <dd class="tag-see">
+                                                <ul>
+                                                    <li><a href="global.html#show-billing-zip">show-billing-zip</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <h5>Examples</h5>
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;billing-zip&quot;,&quot;85284&quot;);</pre>
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;billing-zip&quot;: &quot;85284&quot;
 });</pre>
                                     </dd>
                                     <hr>
@@ -4888,6 +4985,41 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 });</pre>
                                     </dd>
                                     <hr>
+                                    <dt class="name" id="require-billing-zip">
+                                        <h4 id="require-billing-zip"><span class="type-signature"></span>require-billing-zip<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+                                        <div class="description">
+                                            determines if billing zip is shown and required on payment popup; if set to true you do not
+                                            need to set show-billing-zip property
+                                        </div>
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">boolean</span>
+                                            </li>
+                                        </ul>
+                                        <dl class="details">
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                                            <dd class="tag-see">
+                                                <ul>
+                                                    <li><a href="global.html#show-billing-zip">show-billing-zip</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <h5>Examples</h5>
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;require-billing-zip&quot;, true);</pre>
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;require-billing-zip&quot;: true
+});</pre>
+                                    </dd>
+                                    <hr>
                                     <dt class="name" id="require-card-inquiry">
                                         <h4 id="require-card-inquiry"><span class="type-signature"></span>require-card-inquiry<span class="type-signature"> :boolean</span></h4>
                                     </dt>
@@ -5726,6 +5858,63 @@ Clearent.setProperty(&quot;require-shipping-phone&quot;, true);</pre>
                                         <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;save-card-zip-missing-error&quot;, &quot;Please enter a zip code&quot;);</pre>
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;save-card-zip-missing-error&quot;: &quot;Please enter a zip code&quot;
+});</pre>
+                                    </dd>
+                                    <hr>
+                                    <dt class="name" id="shipping-address">
+                                        <h4 id="shipping-address"><span class="type-signature"></span>shipping-address<span class="type-signature"> :object</span></h4>
+                                    </dt>
+                                    <dd>
+                                        <div class="description">
+                                            Optional property to set the shipping address. If shipping address fields are shown, this property is used to pre-populate the fields.
+                                        </div>
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">object</span>
+                                            </li>
+                                        </ul>
+                                        <dl class="details">
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2020.06.17</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>(null)</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                                            <dd class="tag-see">
+                                                <ul>
+                                                    <li><a href="global.html#show-shipping-address">show-shipping-address</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <h5>Examples</h5>
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;shipping-address&quot;,
+     {
+        &quot;first-name&quot;:&quot;John&quot;,
+        &quot;last-name&quot;:&quot;Backus&quot;,
+        &quot;street&quot;:&quot;123 Billing St.&quot;,
+        &quot;city&quot;:&quot;Richmond&quot;,
+        &quot;state&quot;:&quot;MO&quot;,
+        &quot;zip&quot;:&quot;85284&quot;,
+        &quot;phone&quot;:&quot;314-555-1212&quot;
+    });</pre>
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;shipping-address&quot;:{
+        &quot;first-name&quot;:&quot;John&quot;,
+        &quot;last-name&quot;:&quot;Backus&quot;,
+        &quot;street&quot;:&quot;123 Billing St.&quot;,
+        &quot;city&quot;:&quot;Richmond&quot;,
+        &quot;state&quot;:&quot;MO&quot;,
+        &quot;zip&quot;:&quot;85284&quot;,
+        &quot;phone&quot;:&quot;314-555-1212&quot;
+    }
 });</pre>
                                     </dd>
                                     <hr>
@@ -6753,6 +6942,40 @@ Clearent.setProperty(&quot;require-shipping-phone&quot;, true);</pre>
                                         <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;show-billing-address&quot;, true);</pre>
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;show-billing-address&quot;: true
+});</pre>
+                                    </dd>
+                                    <hr>
+                                    <dt class="name" id="show-billing-zip">
+                                        <h4 id="show-billing-zip"><span class="type-signature"></span>show-billing-zip<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+                                        <div class="description">
+                                            determines if billing zip is shown on payment popup
+                                        </div>
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">boolean</span>
+                                            </li>
+                                        </ul>
+                                        <dl class="details">
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+                                            <dd class="tag-see">
+                                                <ul>
+                                                    <li><a href="global.html#require-billing-zip">require-billing-zip</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <h5>Examples</h5>
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;show-billing-zip&quot;, true);</pre>
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;show-billing-zip&quot;: true
 });</pre>
                                     </dd>
                                     <hr>
