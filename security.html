@@ -38,14 +38,37 @@
 
         <h3>Browser Support</h3>
 
-        <p>
-            Clearent’s Hosted Payments Page solution will work with
+        Clearent’s Hosted Payments Page solution will work with
         <ul>
             <li>Chrome</li>
             <li>Firefox</li>
             <li>Edge</li>
             <li>Safari</li>
         </ul>
+
+        <h3>Ending Support For IE 11 Browser and Legacy Edge</h3>
+
+        <p>
+        On August 17, 2020 <a target="_blank" href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666">
+            Microsoft announced that they would be ending support for IE 11 or legacy Edge in Microsoft Teams and M365</a>. We believe that focusing on modern browsers that
+            provide a faster, more secure, more robust browsing experience is the right decision.
+        </p>
+
+        <p>
+            Beginning <b>July 1st, 2021</b>, we will no longer be providing coding shims (polyfills) for missing functionality in IE 11 or legacy Edge. <i>Please note, legacy Edge refers to the
+            older pre-Chromium Edge browser released prior to January 2020. Modern Edge browser is supported.</i>
+        </p>
+
+        <p>
+            We understand that some merchants may wish to support IE 11 or legacy Edge for their websites (or applications that embed a Web Browser control based on an older browser)
+            that use the Clearent Hosted Payments Page. Our recommendation is to use <a target="_blank" href="https://polyfill.io/v3/">Polyfill.io</a>. The script tag below,
+            when added to your page, will polyfill newer JavaScript functionality that is missing in IE 11 and legacy Edge. <i><b>Failure to add this script (or your own polyfill
+            if desired) by July 1st, 2021 may render the Clearent Hosted Payment Page inoperable on IE 11 or legacy Edge.</b></i>
+        </p>
+
+<xmp>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&flags=gated"></script>
+</xmp>
 
         <h3>Transaction Responses</h3>
 
