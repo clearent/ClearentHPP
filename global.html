@@ -2195,6 +2195,53 @@
                                     </dd>
 
                                     <hr>
+                                    <dt class="name" id="apple-pay-amount-label">
+                                        <h4 id="apple-pay-amount-label"><span class="type-signature"></span>apple-pay-amount-label<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear alongside total amount in the Apple payment sheet. If the value is an empty string, the label defaults to merchant DBA.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">string</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>""</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;apple-pay-amount-label&quot;, "Sasha's Mustard Shop");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;apple-pay-amount-label&quot;: "Sasha's Mustard Shop"
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
                                     <dt class="name" id="billing-address">
                                         <h4 id="billing-address"><span class="type-signature"></span>billing-address<span class="type-signature"> :object</span></h4>
                                     </dt>
@@ -2518,6 +2565,52 @@
 
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;card-acceptance-label&quot;: &quot;We proudly accept&quot;
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="card-description-label">
+                                        <h4 id="card-description-label"><span class="type-signature"></span>card-description-label<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear above card description input field when show-labels is true
+                                            and the save card checkbox is selected
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">string</span>
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>"Card Description"</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;card-description-label&quot;, "Card Description");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;card-description-label&quot;: "Card Description"
 });</pre>
 
                                     </dd>
@@ -6784,6 +6877,54 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
                                     </dd>
 
                                     <hr>
+                                    <dt class="name" id="payment-method-heading-text">
+                                        <h4 id="payment-method-heading-text"><span class="type-signature"></span>payment-method-heading-text<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear above the payment section of the payment popup form, which includes card fields
+                                            and possibly digital wallet options.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">string</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>"Payment Method"</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;payment-method-heading-text&quot;, "Payment");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;payment-method-heading-text&quot;: "Payment"
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
                                     <dt class="name" id="phone-label">
                                         <h4 id="phone-label"><span class="type-signature"></span>phone-label<span class="type-signature"> :string</span></h4>
                                     </dt>
@@ -7257,6 +7398,141 @@ Clearent.setProperty(&quot;invoice&quot;, &quot;a12345&quot;);</pre>
 
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;purchase-order-tooltip&quot;: &quot;Enter Purchase Order&quot;
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="read-only-amount">
+                                        <h4 id="read-only-amount"><span class="type-signature"></span>read-only-amount<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            determines if amount field can be modified by the user.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">boolean</span>
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;read-only-amount&quot;, true);</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;read-only-amount&quot;: true
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="read-only-sales-tax-amount">
+                                        <h4 id="read-only-sales-tax-amount"><span class="type-signature"></span>read-only-sales-tax-amount<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            determines if sales-tax-amount field can be modified by the user.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">boolean</span>
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;read-only-sales-tax-amount&quot;, true);</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;read-only-sales-tax-amount&quot;: true
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="read-only-tip-amount">
+                                        <h4 id="read-only-tip-amount"><span class="type-signature"></span>read-only-tip-amount<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            determines if tip-amount field can be modified by the user.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+                                                <span class="param-type">boolean</span>
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;read-only-tip-amount&quot;, true);</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;read-only-tip-amount&quot;: true
 });</pre>
 
                                     </dd>
@@ -10164,6 +10440,54 @@ Clearent.setProperty(&quot;require-shipping-phone&quot;, true);</pre>
                                     </dd>
 
                                     <hr>
+                                    <dt class="name" id="show-apple-pay">
+                                        <h4 id="show-apple-pay"><span class="type-signature"></span>show-apple-pay<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            determines if Apple Pay button is displayed on the payment popup form. Note: for Apple Pay button to show, the merchant/integrator
+                                            must still be registered for Apple Pay for Web.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">boolean</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>true</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;show-apple-pay&quot;, false);</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;show-apple-pay&quot;: false
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
                                     <dt class="name" id="show-billing-address">
                                         <h4 id="show-billing-address"><span class="type-signature"></span>show-billing-address<span class="type-signature"> :boolean</span></h4>
                                     </dt>
@@ -10253,6 +10577,53 @@ Clearent.setProperty(&quot;require-shipping-phone&quot;, true);</pre>
 
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;show-billing-zip&quot;: true
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="show-card-form-dividers">
+                                        <h4 id="show-card-form-dividers"><span class="type-signature"></span>show-card-form-dividers<span class="type-signature"> :boolean</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            adds horizontal rules between sections of the card form.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">boolean</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>false</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;show-card-form-dividers&quot;, true);</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;show-card-form-dividers&quot;: true
 });</pre>
 
                                     </dd>
@@ -11407,6 +11778,54 @@ payment form submit button with text: &quot;Make payment of $22.50&quot;</pre>
 
                                         <pre class="sunlight-highlight-javascript">Clearent.payButton({
     &quot;success-message&quot;: &quot;Payment accepted.&quot;
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="summary-heading-text">
+                                        <h4 id="summary-heading-text"><span class="type-signature"></span>summary-heading-text<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear above the required section of the payment popup form, which includes
+                                            subtotal, sales tax, tip amount, and email address (for receipt).
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">string</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.09.19</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>"Payment Summary"</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;summary-heading-text&quot;, "Summary");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;summary-heading-text&quot;: "Summary"
 });</pre>
 
                                     </dd>
