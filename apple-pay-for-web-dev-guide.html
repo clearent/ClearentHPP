@@ -33,11 +33,11 @@
     <h3>Apple Pay For Web Overview</h3>
 
     <p>Apple Pay for Web allows customers to securely make payments using Apple Pay on their Apple device’s Safari
-      browser. This guide highlights the minimum changes needed for Apple Pay.</p>
+      browser. This guide outlines changes for secure Apple Pay payments via Safari on Apple devices.</p>
 
     <section id="Audience" style="padding-bottom: 0">
       <h4>Audience</h4>
-      <p>This guide is intended for developers/solutions that plan to be, or already are, integrated with the HPP.</p>
+      <p>This guide is intended for developers/solutions that plan to be, or already are, integrated with the Hosted Payment Page (HPP).</p>
     </section>
 
     <section id="Prerequisites" style="padding-bottom: 0">
@@ -92,9 +92,7 @@
     <section id="Supported-Payment-Methods" style="padding-bottom: 0">
       <h4>Supported and Unsupported Payment Methods</h4>
 
-      <p class=MsoNormal style='margin-top:6.0pt'><span style='line-height:106%'>Collect
-      payment and address information from customers who use Apple Pay. The supported
-      cards and merchant capabilities are as follows:</span></p>
+      <p class=MsoNormal style='margin-top:6.0pt'><span style='line-height:106%'>The supported cards and merchant capabilities are as follows:</span></p>
 
       <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
       margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
@@ -130,24 +128,50 @@
       margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
               style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </span></span><span style='line-height:150%'>Voids/Refunds through Apple Pay</span></p>
+
+      <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b>Note:</b> Apple Pay tokens cannot be used for ad hoc charges. As a result, you should not
+      attempt to create a Clearent token using Apple Pay for Web. If you do, the transaction may decline or fail to settle.</p>
     </section>
 
     <section id="Getting-Started" style="padding-bottom: 0">
       <h4>Getting Started</h4>
+      <p>
+        The Apple Pay button will only appear under the following conditions:
+      </p>
 
-      <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
-    margin-bottom:12.0pt;margin-left:.25in;text-indent:-.25in;line-height:107%;
-    text-autospace:ideograph-numeric ideograph-other'><span style='line-height:
-    107%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </span></span><span style='line-height:107%'>Apple’s&nbsp;documentation for
-    Apple Pay on the Web describes the process of&nbsp;“merchant validation”, which
-    Clearent manages behind the scenes.&nbsp;You don’t need to create an Apple
-    Merchant ID, CSR, etc., as described&nbsp;in their documentation and should
-    instead just follow the steps below.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must be participating in Clearent's Apple Pay Beta program (during Beta-phase only).</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must use Direct-to-VISA</span> (Confirm with Clearent your Merchant setup allows for Apple Pay).</p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have the <code>show-apple-pay</code> property configured to <code>true</code> (default: <code>true</code>).</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have at least one registered domain (See <a href="#Registering-Merchant-Domains">Registering Merchant Domains)</a>.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have the payment method set to Sales or Authorizations.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Users must use an Apple device (macOS/iOS) with Safari.</span></p>
     </section>
 
     <section id="Registering-Merchant-Domains" style="padding-bottom: 0">
       <h4>Registering Merchant Domains</h4>
+
+      <p>Apple’s&nbsp;documentation for Apple Pay on the Web describes the process of&nbsp;“merchant validation”, which
+    Clearent manages behind the scenes.&nbsp;You don’t need to create an Apple
+    Merchant ID, CSR, etc., as described&nbsp;in their documentation and should
+    instead just follow the steps below.</p>
 
       <p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
     margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;
@@ -158,17 +182,17 @@
     6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
     ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>2.<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to <b>Virtual Terminal</b> > <a
-              href="https://my.clearent.net/ui/vt/settings"><b>VT Settings</b></a><br>
+              href="https://my.clearent.net/ui/vt/settings"><b>VT Settings</b></a>.
 
       <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
     6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
     ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>3.<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Select a terminal<br>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Select a terminal.
 
       <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
     6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
     ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>4.<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to the <b>Apple Pay for Web</b> tab<br>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to the <b>Apple Pay for Web</b> tab.
 
       <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
     margin-bottom:6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;
@@ -184,7 +208,7 @@
       margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
               style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </span></span><span style='line-height:150%'>You may configure the visibility of the
-      Apple Pay button using the <code>show-apple-pay</code> property (default: <code>true</code>)</span></p>
+      Apple Pay button using the <code>show-apple-pay</code> property (default: <code>true</code>).</span></p>
 
       <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
       margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -194,8 +218,10 @@
         <a href="https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/buttons-and-marks/#button-types">Apple styling guidelines</a>.
       </span></p>
 
-      <p>
-        <b><span style='line-height:106%'>Note:</span></b> HPP supports Apple Pay JS Version 3, which limits the Apple
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'>
+        <span style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+        HPP supports Apple Pay JS Version 3, which limits the Apple
         Pay button style selections. Refer to the <a href="https://developer.apple.com/documentation/apple_pay_on_the_web/displaying_apple_pay_buttons_using_css">Apple Pay Button CSS documentation</a>.
       </p>
 
