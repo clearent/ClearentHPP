@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Clearent Hosted Payment Page by Clearent</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <h1>Clearent Hosted Payment Page</h1>
+
+    <p>Apple Pay For Web</p>
+
+    <menu>
+      <a href="index.html">Overview</a>
+      <a href="security.html">Security Considerations</a>
+      <a href="global.html">Configuration</a>
+      <a href="branding.html">Styling / Branding</a>
+      <a class="active" href="digitalwallet.html">Digital Wallets</a>
+      <a href="examples.html">Examples</a>
+    </menu>
+
+  </header>
+  <section>
+    <h3>Apple Pay For Web Overview</h3>
+
+    <p>Apple Pay for Web allows customers to securely make payments using Apple Pay on their Apple device’s Safari
+      browser. This guide outlines changes for secure Apple Pay payments via Safari on Apple devices.</p>
+
+    <section id="Audience" style="padding-bottom: 0">
+      <h4>Audience</h4>
+      <p>This guide is intended for developers/solutions that plan to be, or already are, integrated with the Hosted Payment Page (HPP).</p>
+    </section>
+
+    <section id="Prerequisites" style="padding-bottom: 0">
+      <h4>Prerequisites</h4>
+      <p>The following are required before you incorporate Apple Pay on your website:</p>
+
+      <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Ensure that the macOS version is
+      10.12.1+ or iOS version is 10.1+ for the Apple Pay payment method. The mac OS
+      supported are Sierra and later.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>This payment method is supported
+      only on Apple device’s browser such as Safari.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Ensure that your server is set up
+      to allow Apple Pay.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Serve your application over HTTPS
+      both in development and in production.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Your domain must have a valid SSL
+      certificate.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Your server must support the
+      Transport Layer Security (TLS) protocol version 1.2 or later, and one of the
+      cipher suites. Refer to the related links for the list of cipher suites.</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+      style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Refer to <span style='color:#0070C0'>Apple
+      Server Configurations </span>for setting up your production environment.</span></p>
+    </section>
+
+    <section id="Supported-Payment-Methods" style="padding-bottom: 0">
+      <h4>Supported and Unsupported Payment Methods</h4>
+
+      <p class=MsoNormal style='margin-top:6.0pt'><span style='line-height:106%'>The supported cards and merchant capabilities are as follows:</span></p>
+
+      <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Supported Cards – Visa,
+      MasterCard, American Express, and Discover</span></p>
+
+      <p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchant Capabilities – Credit
+      Cards, Debit Cards (with either the Visa or Mastercard logo)</span></p>
+
+      <p class=MsoNormal style='margin-top:6.0pt;line-height:150%'><span
+              style='line-height:150%'>The unsupported methods are:</span></p>
+
+      <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>In-App Payments</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Recurring Payments</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Split Shipment</span></p>
+
+      <p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Voids/Refunds through Apple Pay</span></p>
+
+      <p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><b>Note:</b> Apple Pay tokens cannot be used for ad hoc charges. As a result, you should not
+      attempt to create a Clearent token using Apple Pay for Web. If you do, the transaction may decline or fail to settle.</p>
+    </section>
+
+    <section id="Getting-Started" style="padding-bottom: 0">
+      <h4>Getting Started</h4>
+      <p>
+        The Apple Pay button will only appear under the following conditions:
+      </p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must be participating in Clearent's Apple Pay Beta program (during Beta-phase only).</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must use Direct-to-VISA</span> (Confirm with Clearent your Merchant setup allows for Apple Pay).</p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have the <code>show-apple-pay</code> property configured to <code>true</code> (default: <code>true</code>).</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have at least one registered domain (See <a href="#Registering-Merchant-Domains">Registering Merchant Domains)</a>.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Merchants must have the payment method set to Sales or Authorizations.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>Users must use an Apple device (macOS/iOS) with Safari.</span></p>
+    </section>
+
+    <section id="Registering-Merchant-Domains" style="padding-bottom: 0">
+      <h4>Registering Merchant Domains</h4>
+
+      <p>Apple’s&nbsp;documentation for Apple Pay on the Web describes the process of&nbsp;“merchant validation”, which
+    Clearent manages behind the scenes.&nbsp;You don’t need to create an Apple
+    Merchant ID, CSR, etc., as described&nbsp;in their documentation and should
+    instead just follow the steps below.</p>
+
+      <p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
+    margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;
+    text-autospace:ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to <a href="https://my.clearent.net"><b>Merchant Home</b></a>.</p>
+
+      <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+    6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
+    ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to <b>Virtual Terminal</b> > <a
+              href="https://my.clearent.net/ui/vt/settings"><b>VT Settings</b></a>.
+
+      <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+    6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
+    ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Select a terminal.
+
+      <p class=MsoListParagraph style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+    6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;text-autospace:
+    ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Navigate to the <b>Apple Pay for Web</b> tab.
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+    margin-bottom:6.0pt;margin-left:.25in;text-indent:-.25in;line-height:normal;
+    text-autospace:ideograph-numeric ideograph-other'><span style='font-size:11.0pt'>5.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Follow the instructions there to register your domain(s).</p>
+
+    </section>
+
+    <section id="Configuring-Apple-Pay" style="padding-bottom: 0">
+      <h4>Configuring Apple Pay</h4>
+
+      <p class=MsoListParagraphCxSpFirst style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>You may configure the visibility of the
+      Apple Pay button using the <code>show-apple-pay</code> property (default: <code>true</code>).</span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>The Apple Pay button is set to the default style. Apple provides several types of
+        buttons so that you can choose the button type that fits best with the terminology and flow of your
+        purchase or payment experience. Refer to the
+        <a href="https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/buttons-and-marks/#button-types">Apple styling guidelines</a>.
+      </span></p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'>
+        <span style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+        HPP supports Apple Pay JS Version 3, which limits the Apple
+        Pay button style selections. Refer to the <a href="https://developer.apple.com/documentation/apple_pay_on_the_web/displaying_apple_pay_buttons_using_css">Apple Pay Button CSS documentation</a>.
+      </p>
+
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>You can style the Apple Pay button using the
+        <code>#Clearent-apple-pay</code> element or the <code>.Clearent-apple-pay</code> CSS class.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>You can style the Apple Pay row using the
+        <code>#Clearent-apple-pay-row</code> element or the <code>.Clearent-apple-pay-row</code> CSS class.</span></p>
+      <p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+      margin-bottom:8.0pt;margin-left:.25in;text-indent:-.25in;line-height:150%'><span
+              style='line-height:150%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span></span><span style='line-height:150%'>You can style the Apple Pay label using the
+        <code>#Clearent-apple-pay-label</code> element or the <code>.Clearent-apple-pay-label</code> CSS class.
+        This is the text that by default says "Or pay another way".</span></p>
+    </section>
+
+    <section id="Testing" style="padding-bottom: 0">
+      <h4>Testing</h4>
+
+      <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+    margin-left:0in;text-autospace:none'><span style='line-height:106%'>Apple
+    requires an offline test implementation of Apple&nbsp;Pay for apps, websites,
+    and point-of-sale systems. The link </span><a
+              href="https://developer.apple.com/apple-pay/sandbox-testing/"><span
+              style='line-height:106%'>here</span></a><span style='line-height:106%'>
+    provides an overview of the sandbox environment, details on how to get started,
+    and general support for testing your Apple&nbsp;Pay transactions.</span></p>
+    </section>
+
+    <span style='font-size:10.0pt;line-height:106%;font-family:"Arial",sans-serif'><br
+    clear=all style='page-break-before:always'>
+    </span>
+
+    <section id="Appendix" style="padding-bottom: 0">
+      <h4>Appendix A – Related Links</h4>
+
+      <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+    margin-left:0in'><span style='line-height:106%'>Refer to the following table
+    for links to helpful resources:</span></p>
+
+      <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
+        <tr id="Appendix-Description-Header">
+          <td width=168 valign=top style='width:125.75pt;border:solid windowtext 1.0pt;
+      background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><b>Description</b></p>
+          </td>
+          <td width=456 valign=top style='width:341.75pt;border:solid windowtext 1.0pt;
+      border-left:none;background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt'>
+            <p Links</p>
+          </td>
+        </tr>
+        <tr id="Appendix-Clearent-HPP">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Clearent Hosted Payment Page</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+              ideograph-numeric ideograph-other'><a
+                    href="https://clearent.github.io/ClearentHPP/">https://clearent.github.io/ClearentHPP/</a></p>
+          </td>
+        </tr>
+        <tr id="Appendix-Clearent-Apple-Pay-Demo">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Clearent Apple Pay Demo</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+              ideograph-numeric ideograph-other'><a
+                    href="https://hpp-sb.clearent.net/applepaydemo.html">https://hpp-sb.clearent.net/applepaydemo.html</a><span
+                    class=MsoHyperlink> (open in Safari)</span></p>
+          </td>
+        </tr>
+        <tr id="Appendix-Clearent-Example-Code">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Clearent Example Code</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><a
+                    href="https://hpp-sb.clearent.net/index.html#demo21">https://hpp-sb.clearent.net/index.html#demo21</a></p>
+          </td>
+        </tr>
+        <tr id="Appendix-Apple-Developer-Docs">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Apple Developer Documentation</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><a
+                    href="https://developer.apple.com/documentation/apple_pay_on_the_web">https://developer.apple.com/documentation/apple_pay_on_the_web</a></p>
+          </td>
+        </tr>
+        <tr id="Appendix-Apple-Styling-Guidelines">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Apple Styling Guidelines</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'>&nbsp;</p>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><a
+                    href="https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/buttons-and-marks/#button-types">https://developer.apple.com/design/human-interface-guidelines/apple-pay/overview/buttons-and-marks/#button-types</a></p>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'>&nbsp;</p>
+          </td>
+        </tr>
+        <tr id="Appendix-Apple-Server-Configurations">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Apple Server Configurations</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><a
+                    href="https://developer.apple.com/documentation/apple_pay_on_the_web/setting_up_your_server">Setting
+              Up Your Server | Apple Developer Documentation</a></p>
+          </td>
+        </tr>
+        <tr id="Appendix-Apple-Sandbox-Environment">
+          <td width=168 style='width:125.75pt;border:solid windowtext 1.0pt;border-top:
+      none;padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+      6.0pt;margin-left:0in;line-height:normal;text-autospace:ideograph-numeric ideograph-other'>Apple Sandbox Environment</p>
+          </td>
+          <td width=456 style='width:341.75pt;border-top:none;border-left:none;
+      border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+      padding:0in 5.4pt 0in 5.4pt'>
+            <p class=MsoNormal style='margin-bottom:0in;line-height:normal;text-autospace:
+      ideograph-numeric ideograph-other'><a
+                    href="https://developer.apple.com/apple-pay/sandbox-testing/">Apple Pay -
+              Sandbox Testing - Apple Developer</a></p>
+          </td>
+        </tr>
+      </table>
+
+      <p class=MsoNormal><span style='line-height:106%'>&nbsp;</span></p>
+    </section>
+
+  </section>
+  <footer>
+    <p>This project is maintained by <a href="https://github.com/Clearent">Clearent</a></p>
+
+    <p>
+      <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
+      </small>
+    </p>
+  </footer>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+
+</body>
+</html>
