@@ -2242,6 +2242,100 @@
                                     </dd>
 
                                     <hr>
+                                    <dt class="name" id="apple-pay-payment-session-error-message">
+                                        <h4 id="apple-pay-payment-session-error-message"><span class="type-signature"></span>apple-pay-payment-session-error-message<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear in the popup when an Apple Pay session fails to be established.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">string</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.11.17</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>"We were unable to establish an Apple Pay session for your payment transaction. Please try again or complete your order by entering your card details."</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;apple-pay-payment-session-error-message&quot;, "We were unable to establish an Apple Pay session for your payment transaction. Please try again or complete your order by entering your card details.");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;apple-pay-payment-session-error-message&quot;: "We were unable to establish an Apple Pay session for your payment transaction. Please try again or complete your order by entering your card details."
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
+                                    <dt class="name" id="apple-pay-transaction-error-message">
+                                        <h4 id="apple-pay-transaction-error-message"><span class="type-signature"></span>apple-pay-transaction-error-message<span class="type-signature"> :string</span></h4>
+                                    </dt>
+                                    <dd>
+
+                                        <div class="description">
+                                            text to appear in the popup when an Apple Pay transaction was unsuccessful.
+                                        </div>
+
+                                        <h5>Type:</h5>
+                                        <ul>
+                                            <li>
+
+                                                <span class="param-type">string</span>
+
+                                            </li>
+                                        </ul>
+
+                                        <dl class="details">
+
+                                            <dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+                                            <dd class="tag-since">
+                                                <ul class="dummy">
+                                                    <li>1.2023.11.17</li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt class="tag-default method-doc-label method-doc-details-label">Default Value:</dt>
+                                            <dd class="tag-default">
+                                                <ul class="dummy">
+                                                    <li>"We are unable to process your Apple Pay transaction. Please try again or complete your order by entering your card details below. If the problem persists, please contact us."</li>
+                                                </ul>
+                                            </dd>
+
+                                        </dl>
+
+                                        <h5>Examples</h5>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.setProperty(&quot;apple-pay-transaction-error-message&quot;, "We are unable to process your Apple Pay transaction. Please try again or complete your order by entering your card details below. If the problem persists, please contact us.");</pre>
+
+                                        <pre class="sunlight-highlight-javascript">Clearent.payButton({
+    &quot;apple-pay-transaction-error-message&quot;: "We are unable to process your Apple Pay transaction. Please try again or complete your order by entering your card details below. If the problem persists, please contact us."
+});</pre>
+
+                                    </dd>
+
+                                    <hr>
                                     <dt class="name" id="billing-address">
                                         <h4 id="billing-address"><span class="type-signature"></span>billing-address<span class="type-signature"> :object</span></h4>
                                     </dt>
